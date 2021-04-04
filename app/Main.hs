@@ -1,6 +1,6 @@
 module Main where
 
-import Lab2 ( runSim )
+import           Project
 
 main :: IO ()
-main = runSim
+main = run

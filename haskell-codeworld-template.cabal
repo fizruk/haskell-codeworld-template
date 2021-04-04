@@ -1,64 +1,59 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.3.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 
-name:           HaskellDevEnv
+name:           haskell-codeworld-template
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/IamMaxim/HaskellDevEnv#readme>
-homepage:       https://github.com/IamMaxim/HaskellDevEnv#readme
-bug-reports:    https://github.com/IamMaxim/HaskellDevEnv/issues
+description:    Please see the README on GitHub at <https://github.com/fizruk/haskell-codeworld-template#readme>
+homepage:       https://github.com/fizruk/haskell-codeworld-template#readme
+bug-reports:    https://github.com/fizruk/haskell-codeworld-template/issues
 author:         Maxim Stepanov
 maintainer:     g.maxim.stepanoff@gmail.com
-copyright:      2021 IamMaxim
+copyright:      2022 Nikolai Kudasov
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/IamMaxim/HaskellDevEnv
+  location: https://github.com/fizruk/haskell-codeworld-template
 
 library
   exposed-modules:
-      Lab2
-      Lib
-  other-modules:
-      Paths_HaskellDevEnv
+      Project
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
     , codeworld-api ==0.7.0
+    , text
   default-language: Haskell2010
 
-executable HaskellDevEnv-exe
+executable haskell-codeworld-template-exe
   main-is: Main.hs
-  other-modules:
-      Paths_HaskellDevEnv
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      HaskellDevEnv
+      haskell-codeworld-template
     , base >=4.7 && <5
     , codeworld-api ==0.7.0
+    , text
   default-language: Haskell2010
 
-test-suite HaskellDevEnv-test
+test-suite haskell-codeworld-template-spec
   type: exitcode-stdio-1.0
   main-is: Spec.hs
-  other-modules:
-      Paths_HaskellDevEnv
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      HaskellDevEnv
+      haskell-codeworld-template
     , base >=4.7 && <5
     , codeworld-api ==0.7.0
+    , text
   default-language: Haskell2010
