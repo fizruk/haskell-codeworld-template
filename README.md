@@ -1,5 +1,7 @@
 # Haskell project template with CodeWorld
 
+![Hello world demo.](images/hello-world.png)
+
 ## Prerequisites
 
 This project can be build with Cabal and GHC 8.10.7.
