@@ -1,12 +1,20 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Project where
 
-import           CodeWorld
+import CodeWorld
 
--- | Sample picture.
-myPicture :: Picture
-myPicture = colored blue (lettering "Hello, world!")
+tree :: Int -> Picture
+tree 0 = blank
+tree n = trunk <> translated 0 1 (leftBranch <> rightBranch)
+  where
+    branch = tree (n - 1)
+    theta = pi/9
+    leftBranch = rotated theta branch
+    rightBranch = rotated (-theta) branch
+    trunk = translated 0 0.5 (solidRectangle 0.1 1)
 
--- | Default entry point.
+ourTree :: Picture
+ourTree = tree 10
+
 run :: IO ()
-run = drawingOf myPicture
+run = drawingOf ourTree
