@@ -31,6 +31,7 @@ custom-setup
 
 library
   exposed-modules:
+      EscapeTheRoom.Levels
       Project
   other-modules:
       Paths_haskell_codeworld_template
